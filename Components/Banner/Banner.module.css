@@ -1,15 +1,15 @@
 /** By default, this is a mobile breakpoint **/
-.container {
-  margin-bottom: 1rem;
+.Container {
+  width: 100%;
 }
 
 .title {
   letter-spacing: -0.025em;
   font-weight: 800;
   color: var(--text-black);
-
   font-size: 3rem /* 48px */;
   line-height: 1;
+  margin-bottom: 10px;
 }
 
 .title1 {
@@ -18,38 +18,29 @@
 
 .title2 {
   display: block;
-  color: var(--text-purple);
+  color: var(--text-bluish);
 }
 
 .subTitle {
-  margin-top: 0.75rem;
-  font-size: 1.5rem /* 24px */;
-  line-height: 2rem /* 32px */;
-
+  padding-left: 20px;
+  font-size: 1.2rem /* 24px */;
   color: var(--text-white-100);
 }
 
-.buttonWrapper {
-  margin-top: 1.25rem;
-}
-
 .button {
-  background-color: var(--text-purple-dark);
+  background-color: var(--text-bluish);
   cursor: pointer;
-  color: white;
+  color: var(--text-purple-dark);
+  font-weight: bolder;
+  font-size: 1.2rem;
   outline: 0;
-  border: 0px;
-
-  padding-top: 1rem /* 16px */;
-  padding-bottom: 1rem /* 16px */;
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
-  padding-left: 2.5rem /* 40px */;
-  padding-right: 2.5rem /* 40px */;
+  border: none;
+  padding: 20px 30px;
+  margin-left: 20px;
 }
 
 .button:hover {
-  background-color: var(--text-purple-dark);
+  background-color: var(--text-white-100);
 }
 
 /** 
@@ -63,25 +54,55 @@
 **/
 
 /** sm breakpoint **/
+@media (min-width: 300px) {
+  .Container{
+    border: 2px solid aqua;
+    padding-left: 10px;
+  }
+
+  .title{
+    font-size: 30px;
+  }
+
+  .subTitle{
+    font-size: 11px;
+    padding-left: 0;
+  }
+
+  .button{
+    font-size: 10px;
+    padding: 10px 20px;
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 640px) {
+  .Container{
+    padding-left: 20px;
+    border: 2px solid blue;
+  }
+
   .title {
     font-size: 3rem /* 48px */;
     line-height: 1;
   }
 
   .subTitle {
-    margin-top: 1.25rem;
+    font-size: 15px;
     max-width: 36rem;
   }
 
-  .buttonWrapper {
-    display: flex;
-    margin-top: 2rem;
+  .button{
+    font-size: 15px;
   }
 }
 
 /** md breakpoint **/
 @media (min-width: 768px) {
+  .Container{
+    padding-left: 50px;
+    border: 2px solid green;
+  }
   .title {
     font-size: 3.75rem /* 60px */;
     line-height: 1;
@@ -90,21 +111,13 @@
   .subTitle {
     margin-top: 1.25rem;
   }
-
-  .button {
-    padding-top: 1rem /* 16px */;
-    padding-bottom: 1rem /* 16px */;
-    font-size: 1.125rem /* 18px */;
-    line-height: 1.75rem /* 28px */;
-    padding-left: 2.5rem /* 40px */;
-    padding-right: 2.5rem /* 40px */;
-  }
 }
 
 /** lg breakpoint **/
 @media (min-width: 1024px) {
   .container {
     text-align: left;
+    border: 2px solid yellow;
   }
 
   .title {
@@ -128,6 +141,10 @@
 
 /** xl breakpoint **/
 @media (min-width: 1280px) {
+  .Container{
+    padding-left: 100px;
+    border: 2px solid white;
+  }
   .title2 {
     display: inline;
   }

@@ -24,7 +24,7 @@ a {
 
 /* Variables for the project*/
 :root{
-  --text-purple: rgb(56, 202, 195);
+  --text-bluish: rgb(56, 202, 195);
   --text-purple-dark: rgb(4, 1, 59);
   --text-black: rgba(17, 24, 39, 1);
   --text-white-100: rgba(229, 231, 235, 1);
