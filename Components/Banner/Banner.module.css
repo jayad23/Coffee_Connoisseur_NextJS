@@ -1,46 +1,57 @@
 /** By default, this is a mobile breakpoint **/
-.Container {
-  width: 100%;
+.container {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .title {
   letter-spacing: -0.025em;
   font-weight: 800;
   color: var(--text-black);
+
   font-size: 3rem /* 48px */;
   line-height: 1;
-  margin-bottom: 10px;
-  font-family: 'Tapestry', cursive;
 }
 
 .title1 {
   color: rgba(249, 250, 251, 1);
-  margin-right: 10px;
 }
 
 .title2 {
   display: block;
-  color: var(--text-bluish);
+  color: var(--text-purple);
 }
 
 .subTitle {
-  padding-left: 20px;
-  font-size: 1.2rem /* 24px */;
+  margin-top: 0.75rem;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+
   color: var(--text-white-100);
 }
 
+.buttonWrapper {
+  margin-top: 1.25rem;
+}
+
 .button {
-  background-color: var(--text-bluish);
+  background-color: var(--text-purple-dark);
   cursor: pointer;
-  color: var(--text-purple-dark);
-  font-weight: bolder;
-  font-size: 1.2rem;
+  color: white;
   outline: 0;
-  border: none;
+  border: 0px;
+
+  padding-top: 1rem /* 16px */;
+  padding-bottom: 1rem /* 16px */;
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+  padding-left: 2.5rem /* 40px */;
+  padding-right: 2.5rem /* 40px */;
 }
 
 .button:hover {
-  background-color: var(--text-white-100);
+  background-color: var(--text-purple-dark);
 }
 
 /** 
@@ -54,52 +65,25 @@
 **/
 
 /** sm breakpoint **/
-@media (min-width: 300px) {
-  .Container{
-    padding-left: 10px;
-  }
-
-  .title{
-    font-size: 30px;
-  }
-
-  .subTitle{
-    font-size: 11px;
-    padding-left: 0;
-  }
-
-  .button{
-    font-size: 10px;
-    padding: 10px 20px;
-    margin-left: 0;
-  }
-}
-
 @media (min-width: 640px) {
-  .Container{
-    padding-left: 20px;
-  }
-
   .title {
     font-size: 3rem /* 48px */;
     line-height: 1;
   }
 
   .subTitle {
-    font-size: 15px;
+    margin-top: 1.25rem;
     max-width: 36rem;
   }
 
-  .button{
-    font-size: 15px;
+  .buttonWrapper {
+    display: flex;
+    margin-top: 2rem;
   }
 }
 
 /** md breakpoint **/
 @media (min-width: 768px) {
-  .Container{
-    padding-left: 50px;
-  }
   .title {
     font-size: 3.75rem /* 60px */;
     line-height: 1;
@@ -107,6 +91,15 @@
 
   .subTitle {
     margin-top: 1.25rem;
+  }
+
+  .button {
+    padding-top: 1rem /* 16px */;
+    padding-bottom: 1rem /* 16px */;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    padding-left: 2.5rem /* 40px */;
+    padding-right: 2.5rem /* 40px */;
   }
 }
 
@@ -137,19 +130,7 @@
 
 /** xl breakpoint **/
 @media (min-width: 1280px) {
-  .Container{
-    padding-left: 100px;
-  }
   .title2 {
     display: inline;
-  }
-
-  .subTitle{
-    padding-left: 20px;
-  }
-
-  .button{
-    padding: 20px 30px;
-    margin-left: 20px;
   }
 }

@@ -1,25 +1,20 @@
 import styles from "./Banner.module.css";
-const { 
-    Container, title, 
-    title1, title2, subTitle,
-    button 
-} = styles;
+
 const Banner = ({ buttonText, buttonHandler})=>{
     return (
-        <div className={Container}>
-            <h1 className={title}>
-                <span className={title1}>The</span>
-                <span className={title2}>Conquistador</span>
-            </h1>
-            <p className={subTitle}>Discover the best pubs and cafes in Fuente Palmera</p>
-            <button 
-                className={button}
-                onClick={buttonHandler}
-                >
-                    {buttonText}
+        <div className={styles.container}>
+          <h1 className={styles.title}>
+            <span className={styles.title1}>Coffee</span>
+            <span className={styles.title2}>Connoisseur</span>
+          </h1>
+          <p className={styles.subTitle}>Discover your local coffee shops!</p>
+          <div className={styles.buttonWrapper}>
+            <button className={styles.button} onClick={buttonHandler}>
+              {buttonText}
             </button>
+          </div>
         </div>
-    )
+      );
 }
 
 export default Banner;
