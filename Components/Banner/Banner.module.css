@@ -32,25 +32,14 @@
 }
 
 .buttonWrapper {
-  margin-top: 1.25rem;
-}
-
-.button {
-  background-color: var(--text-purple-dark);
-  cursor: pointer;
+  padding:  15px 30px;
+  width: 180px;
+  background-color: var(--text-purple);
   color: white;
-  outline: 0;
-  border: 0px;
-
-  padding-top: 1rem /* 16px */;
-  padding-bottom: 1rem /* 16px */;
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
-  padding-left: 2.5rem /* 40px */;
-  padding-right: 2.5rem /* 40px */;
+  cursor: pointer;
 }
 
-.button:hover {
+.buttonWrapper:hover {
   background-color: var(--text-purple-dark);
 }
 

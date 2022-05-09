@@ -1,0 +1,95 @@
+.mainWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonWrapper{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding:  15px 30px;
+    width: 180px;
+    background-color: var(--text-purple);
+    color: white;
+    cursor: pointer;
+}
+
+.buttonWrapper:hover{
+    background-color: var(--text-purple-dark);
+}
+
+.titleWrapper{
+    margin-bottom: 4rem;
+}
+
+.title{
+    font-size: 50px;
+    background: -webkit-linear-gradient(rgb(17, 45, 204), rgb(74, 13, 112));
+    -webkit-background-clip: text;    
+    -webkit-text-fill-color: transparent;
+}
+
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.inputField{
+    border: none;
+    width: 70%;
+    height: 30px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+
+.button{
+    border: 2px solid white;
+    background-color: white;
+    transition: .4s all ease-in-out;
+}
+
+.button:focus{
+    outline: none;
+    
+}
+
+.button:hover{
+    background-color: var(--text-purple);
+    color: white;
+}
+
+.subWrapper{
+    transform: translateY(80%);
+}
+
+.animation{
+    animation:  1s textMoving ease-in-out ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textMoving {
+    0%{
+        transform: translateY(7%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.cardLayout{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

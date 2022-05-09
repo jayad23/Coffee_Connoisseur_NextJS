@@ -33,10 +33,12 @@
   font-weight: 800;
   overflow: hidden;
   width: 16rem /* 256px */;
+  text-transform: capitalize;
 }
 
 .cardImageWrapper {
   color: var(--text-white-100);
+  padding-left: 26px;
 }
 
 .cardImage {

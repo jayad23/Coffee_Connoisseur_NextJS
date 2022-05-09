@@ -9,10 +9,10 @@ import likeIcon from "../../public/static/like.png";
 import dislikeIcon from "../../public/static/dislike.png";
 
 export const CoffeeStoreComponent = ({ store_data, count, dislike, setDislike, countHandler, complaint, setComplaint })=>{
-    return (
+  return (
       <div className={styles.layout}>
         <Head>
-            <title>Café: {store_data.name}</title>
+            <title>{store_data.alt}</title>
         </Head>
         <div className={styles.container}>
           <div className={styles.col1}>
@@ -22,11 +22,11 @@ export const CoffeeStoreComponent = ({ store_data, count, dislike, setDislike, c
               </Link>
             </div>
             <div className={styles.nameWrapper}>
-              <p className={anotherStyles.heading2}>{store_data.name}</p>
+              <p className={anotherStyles.heading2}>{store_data.alt}</p>
             </div>
             <Image 
-              src={store_data.imgUrl} 
-              alt={store_data.name}
+              src={store_data.src.original} 
+              alt={store_data.alt}
               width={600}
               height={400}
             />
@@ -59,11 +59,11 @@ export const CoffeeStoreComponent = ({ store_data, count, dislike, setDislike, c
             :
               <section className={cls("glass", styles.col2)}>
                 <div style={{ display: "flex", flexDirection: "column", gap: "15px"}}>
-                  <h2 className={styles.text}><span style={{ color:"crimson"}}>Café:</span>: {store_data.name}</h2>
-                  <p className={styles.text}><span style={{ color:"crimson"}}>Where:</span>: {store_data.address}</p>
-                  <p className={styles.text}><span style={{ color:"crimson"}}>At:</span>: {store_data.neighbourhood}</p>
+                  <h2 className={styles.subText}><span className={styles.text} style={{ color:"crimson"}}>Artist:</span> {store_data.photographer}</h2>
+                  <p className={styles.subText}><span className={styles.text} style={{ color:"crimson"}}>Visit at:</span> {store_data.photographer_url}</p>
+                  <p className={styles.subText}><span className={styles.text} style={{ color:"crimson"}}>Spectrum:</span> {store_data.avg_color}</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: "10px"}}>
-                    <span style={{color: "white", fontWeight:"bold"}}>{count} people liked this café.</span>
+                    <span style={{color: "white", fontWeight:"bold"}}>{count} People liked this picture.</span>
                     <div style={{display: "flex", gap:"10px"}}>
                         <div className={styles.likeButtonContainer}>
                           <button
