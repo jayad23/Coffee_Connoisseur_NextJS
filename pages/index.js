@@ -5,7 +5,7 @@ import Card from '../Components/Card/Card';
 import Image from 'next/image';
 import { getImagesFn } from '../lib/getImagesFn';
 import { objectRequest } from '../lib/searchParameters';
-//this is the fuction that is used to pre-render data which comes from the server
+
 
 export async function getStaticProps (){ 
   const { photos } = await getImagesFn(objectRequest);
