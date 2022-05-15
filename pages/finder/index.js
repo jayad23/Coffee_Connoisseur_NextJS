@@ -76,7 +76,7 @@ export default function Finder (){
                             )
                             })
                         :
-                        <h1 style={{color: "white"}}>{error.isError ? error.message : ""}</h1>
+                        <h1 style={{color: "white"}}>{error.isError ? "No data found" : ""}</h1>
                     }
                 </div>
             </div>
