@@ -10,6 +10,7 @@ export default function Finder (){
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState({ isError: false, message: undefined });
     const { state, dispatch } = useContext(StoreContext);
+
     const searchHandler = (e)=>{
         e.preventDefault();
         const { data } = valueRefactor(searchValue);
@@ -17,8 +18,8 @@ export default function Finder (){
             setLoading(true)
             const request = async ()=>{
                 const response = await fetch(`https://api.pexels.com/v1/search?query=${data}&per_page=24`, { 
-                    headers: { 
-                        Authorization: "563492ad6f9170000100000198e1e2600f3640b9b31a74ac6f6919b3"
+                    headers: {
+                        Authorization: "563492ad6f9170000100000198e1e2600f3640b9b31a74ac6f6919b3",
                     }}
                 );
                 const results = await response.json();
@@ -31,7 +32,7 @@ export default function Finder (){
         }
         setSearchValue("");
     }
-    
+
     return (
         <div className={styles.mainWrapper}>
             <div className={styles.buttonWrapper}>
@@ -75,7 +76,7 @@ export default function Finder (){
                             )
                             })
                         :
-                        <h1 style={{color: "white"}}>{error.isError ? "No data was found!" : ""}</h1>
+                        <h1 style={{color: "white"}}>{error.isError ? error.message : ""}</h1>
                     }
                 </div>
             </div>
