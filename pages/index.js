@@ -1,5 +1,5 @@
 import Header from '../Components/Header/Header'
-import Banner from '../Components/Banner/Banner'
+import Banner from '../Components/Banner/Banner.js'
 import styles from '../styles/Home.module.css'
 import Card from '../Components/Card/Card';
 import Image from 'next/image';
