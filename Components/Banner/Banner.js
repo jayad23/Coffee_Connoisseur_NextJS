@@ -1,7 +1,7 @@
 import styles from "./banner.module.css";
 import Link from "next/link";
 
-const Banner = ({ buttonText, buttonHandler})=>{
+const Banner = ({ buttonText})=>{
     return (
         <div className={styles.container}>
           <h1 className={styles.title}>
